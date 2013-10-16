@@ -12,11 +12,15 @@ Installation
 
 Then, you can pull the docker images from the [docker index](https://index.docker.io/). It may take some time to download but this is faster than building the images.
 
-  make pull
+```
+make pull
+```
 
 You can also build the docker images locally:
 
-  make build
+```
+make build
+```
 
 The Dockerfile expect the application source code to live in `rails/railsapp`.
 
