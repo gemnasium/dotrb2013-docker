@@ -1,0 +1,8 @@
+#!/bin/sh
+cd /rails
+
+dbconf="config/database.yml"
+sed -i "s/host: .*/host: $POSTGRES_HOST/" $dbconf
+sed -i "s/port: .*/port: $POSTGRES_PORT/" $dbconf
+
+bundle exec foreman start -f Procfile-production

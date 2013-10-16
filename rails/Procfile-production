@@ -1,0 +1,5 @@
+redis: /usr/bin/redis-server /etc/redis/redis.conf
+nginx: /usr/sbin/nginx
+web: su -l -p rails -c "bundle exec unicorn_rails -c config/unicorn.rb -E production"
+scheduler: su -l -p rails -c "bundle exec rake resque:scheduler"
+worker: su -l -p rails -c "bundle exec rake resque:work QUEUE=*"

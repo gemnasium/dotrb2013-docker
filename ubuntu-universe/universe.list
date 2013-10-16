@@ -1,0 +1,4 @@
+deb http://fr.archive.ubuntu.com/ubuntu/ precise universe
+deb-src http://fr.archive.ubuntu.com/ubuntu/ precise universe
+deb http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe
+deb-src http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe

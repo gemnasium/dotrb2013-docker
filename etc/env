@@ -1,0 +1,12 @@
+# -*- sh -*-
+# To override the environment variables here, add them to .env.
+
+# export GITHUB_CLIENT_ID="1337"
+# export GITHUB_CLIENT_SECRET="secret"
+export ROOT_URL="http://localhost:3000"
+export RAILS_ENV="production"
+
+# Overrides.
+if [ -e .env ]; then
+    source .env
+fi

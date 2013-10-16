@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+. etc/env
+
+set -x
+exec docker run fcat/postgresql

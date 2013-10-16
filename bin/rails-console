@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+. etc/env
+
+source bin/postgresql-info
+
+set -x
+exec docker run \
+ -e GITHUB_CLIENT_ID=$GITHUB_CLIENT_ID \
+ -e GITHUB_CLIENT_SECRET=$GITHUB_CLIENT_SECRET \
+ -e POSTGRES_HOST=$HOSTIP \
+ -e POSTGRES_PORT=$POSTGRES_PORT \
+ -e ROOT_URL=$ROOT_URL \
+ -t -i fcat/dotrb2013-rails \
+  /bin/bash

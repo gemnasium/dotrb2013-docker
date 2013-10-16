@@ -1,0 +1,13 @@
+#!/bin/bash
+# Display psql command line to connect to running postgres
+
+set -e
+. etc/env
+
+ID=$(docker ps | grep fcat/postgresql | awk '{print $1}' | head -n 1)
+
+export POSTGRES_HOST=$HOSTIP
+export POSTGRES_PORT=$(docker port $ID 5432)
+export POSTGRES_PASS="postgres"
+
+export POSTGRES_CLI="psql -p $POSTGRES_PORT -U root -h $HOSTIP -d postgres"
