@@ -25,7 +25,7 @@ make build
 The Dockerfile expect the application source code to live in `rails/railsapp`.
 
 ```
-git clone https://github.com/tech-angels/dotrb2013.git rails/railsapp
+git clone https://github.com/gemnasium/dotrb2013.git rails/railsapp
 ```
 
 Warning! Building the images takes some time. To speed things up, you may install a proxy for the debian-like repositories using [Apt-Cacher NG](https://www.unix-ag.uni-kl.de/~bloch/acng/).
