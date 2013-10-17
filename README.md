@@ -97,6 +97,22 @@ If your rails app can not connect to the database, make sure that:
 * `POSTGRES_PORT` environment variable is set when calling `bin/postgresql-info`
 * you export `HOSTIP` environment variable before starting the rails container
 
+If you want to inspect the log file of the Rails app:
+
+1. find the ID of the rails container using `docker ps`
+1. copy the log file from the container to the host using `docker cp`
+
+Here is an example:
+
+```
+$ docker ps | grep rails
+5272c3f328d6        fcat/dotrb2013-rails:latest   /bin/sh -c "/rails/s   About a minute ago   Up About a minute   49154->80
+
+$ docker cp 5272c3f328d6:/rails/log/production.log .
+
+$ less production.log
+```
+
 Inside the rails container
 --------------------------
 
