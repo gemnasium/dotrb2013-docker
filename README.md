@@ -122,12 +122,26 @@ This command starts rails, redis and other dependencies:
 /rails/start-production
 ```
 
-The source code belongs to a `rails` user, so it's best to switch to that user to update the code or run some rake tasks:
+The source code belongs to a `rails` user, so it's best to switch to that user to update the code or run some rake tasks.
+
+Here is a bash session that shows you how to run the database migrations:
 
 ```
-su -l -p rails
-cd /rails
-bundle exec rake db:migrate
+# start the "rails" container
+# environment variables are sent to the container
+./bin/rails-debug
+
+# become "rails"
+# environment variables are preserved
+$ su -l -p rails
+$ cd /rails
+
+# set postgresql configuration
+sed -i "s/host: .*/host: $POSTGRES_HOST/" config/database.yml
+sed -i "s/port: .*/port: $POSTGRES_PORT/" config/database.yml
+
+# run the migration
+RAILS_ENV=production ./bin/rake db:migrate
 ```
 
 Keep your data
