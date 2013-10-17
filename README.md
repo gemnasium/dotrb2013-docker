@@ -5,10 +5,21 @@ Scripts and Dockerfiles to install the [gemnasium/dotrb2013](https://github.com/
 
 The [gemnasium/dotrb2013](https://github.com/gemnasium/dotrb2013) project is a sample Rails application for the [Gemnasium workshop](http://www.dotrb.eu/workshops#gemnasium) at [dotRB2013](http://www.dotrb.eu/).
 
-Installation
+Requirements
 ------------
 
-[Install docker](https://www.docker.io/gettingstarted/) on your host. Make sure `docker` runs without `sudo` (or create a shell alias to circumvent that).
+* [Docker](https://www.docker.io/gettingstarted/)
+* Git
+* Linux Ubuntu >= 12.04
+
+Make sure `docker` runs without `sudo` (or create a shell alias to circumvent that).
+
+**Warning**: If you are running any OS other than ubuntu, you can install [vagrant](http://downloads.vagrantup.com/) and follow the docker guide: 
+http://docs.docker.io/en/latest/installation/vagrant/
+
+
+Installation
+------------
 
 Clone this repository:
 
