@@ -4,4 +4,4 @@ set -e
 . etc/env
 
 set -x
-exec docker run fcat/postgresql
+exec docker run fcat/dotrb2013-postgresql

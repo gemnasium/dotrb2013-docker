@@ -4,7 +4,7 @@
 set -e
 . etc/env
 
-ID=$(docker ps | grep fcat/postgresql | awk '{print $1}' | head -n 1)
+ID=$(docker ps | grep postgresql | awk '{print $1}' | head -n 1)
 
 export POSTGRES_HOST=$HOSTIP
 export POSTGRES_PORT=$(docker port $ID 5432)
