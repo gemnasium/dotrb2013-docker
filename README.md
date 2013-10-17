@@ -37,19 +37,29 @@ make pull
 Setup
 -----
 
-Part of the configuration for the Rails app comes from some environment variables. These variables must be set before the rails app is started using `rails-start`.
+Part of the configuration for the Rails app comes from some environment variables. These variables must be set before the rails app is started using the `./bin/rails-start` script.
 
 ```
 GITHUB_CLIENT_ID="1337"
 GITHUB_CLIENT_SECRET="secret"
+HOSTIP=192.168.0.19
 
 export GITHUB_CLIENT_ID
 export GITHUB_CLIENT_SECRET
+export HOSTIP
 
-bin/rails-start
+./bin/rails-start
 ```
 
 You can also create a `.env` file in the root directory of the project.
+
+Here is a sample `.env` file:
+
+```
+GITHUB_CLIENT_ID="1337"
+GITHUB_CLIENT_SECRET="secret"
+HOSTIP=192.168.0.19
+```
 
 Look at `etc/env` for a list of the expected environment variables.
 
