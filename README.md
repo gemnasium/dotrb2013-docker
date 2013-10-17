@@ -88,6 +88,15 @@ You can also run an interactive bash session:
 ./bin/rails-console
 ```
 
+Troubleshooting
+---------------
+
+If your rails app can not connect to the database, make sure that:
+
+* postgresql container is up and running; have a look at `docker ps`
+* `POSTGRES_PORT` environment variable is set when calling `bin/postgresql-info`
+* you export `HOSTIP` environment variable before starting the rails container
+
 Inside the rails container
 --------------------------
 
