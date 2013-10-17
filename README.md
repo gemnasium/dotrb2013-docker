@@ -200,6 +200,13 @@ git clone https://github.com/gemnasium/dotrb2013.git rails/railsapp
 
 Warning! Building the images takes some time. To speed things up, you may install a proxy for the debian-like repositories using [Apt-Cacher NG](https://www.unix-ag.uni-kl.de/~bloch/acng/).
 
+`dotrb2013-postgresql` docker image has been created manually from `postgresql` image. Here is the cuke:
+
+1. start a new "postgresql" container
+1. start a new "rails" container using the `rails-start` script
+1. run the migrations from the "rails" container
+1. grab the ID of the "postgresql" container
+1. run `docker commit` to create a new docker image out of the "postgresql" container
 
 Good luck!
 
