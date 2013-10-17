@@ -34,20 +34,6 @@ Then, you can pull the docker images from the [docker index](https://index.docke
 make pull
 ```
 
-You can also build the docker images locally:
-
-```
-make build
-```
-
-The Dockerfile expect the application source code to live in `rails/railsapp`.
-
-```
-git clone https://github.com/gemnasium/dotrb2013.git rails/railsapp
-```
-
-Warning! Building the images takes some time. To speed things up, you may install a proxy for the debian-like repositories using [Apt-Cacher NG](https://www.unix-ag.uni-kl.de/~bloch/acng/).
-
 Setup
 -----
 
@@ -150,6 +136,21 @@ To contribute and share:
 * change the commiter name in the Dockerfile files
 
 You don't really need rails-base and ubuntu-multiverse docker images, but it may save you some time as the building process is pretty slow (and the docker caching mechanism is not reliable with commands like `apt-get update`).
+
+To build the docker images locally:
+
+```
+make build
+```
+
+The Dockerfile expect the application source code to live in `rails/railsapp`.
+
+```
+git clone https://github.com/gemnasium/dotrb2013.git rails/railsapp
+```
+
+Warning! Building the images takes some time. To speed things up, you may install a proxy for the debian-like repositories using [Apt-Cacher NG](https://www.unix-ag.uni-kl.de/~bloch/acng/).
+
 
 Good luck!
 
