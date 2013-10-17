@@ -10,6 +10,13 @@ Installation
 
 [Install docker](https://www.docker.io/gettingstarted/) on your host. Make sure `docker` runs without `sudo` (or create a shell alias to circumvent that).
 
+Clone this repository:
+
+```
+git clone https://github.com/gemnasium/dotrb2013-docker.git
+cd dotrb2013-docker
+```
+
 Then, you can pull the docker images from the [docker index](https://index.docker.io/). It may take some time to download but this is faster than building the images.
 
 ```
